@@ -21,7 +21,7 @@ module flash_array_8x8 (
 
     // SL
     input SL,
-    input PSUB,
+    input VBPW,
 
     // senseamp
     input sen1,

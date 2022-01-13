@@ -102,7 +102,7 @@ flash_array_8x8 u_flash_array_8x8(
     .WL0(analog_io[15:12]),
     .WL1(analog_io[19:16]),
     .SL(analog_io[20]),
-    .PSUB(analog_io[21]),
+    .VBPW(analog_io[21]),
 
     .sen1(io_in[0]),
     .sen2(io_in[1]),
