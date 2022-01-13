@@ -2,9 +2,11 @@
 `default_nettype none
 
 module flash_array_8x8 (
-`ifdef USE_POWER_PINS
-    inout vccd1, vssd1,
-`endif
+// `ifdef USE_POWER_PINS
+//     inout vccd1, vssd1,
+// `endif
+
+    input VDD,GND,
 
     // BL
     inout [7:0] BL,

@@ -76,18 +76,26 @@ module user_project_wrapper #(
 
     // User maskable interrupt signals
     output [2:0] user_irq
+
 );
+
+    wire vdd,gnd;
+
+    assign vdd = vccd1;
+    assign gnd = vssd1;
 
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
 flash_array_8x8 u_flash_array_8x8(
-`ifdef USE_POWER_PINS
-    .vccd1(vccd1),
-    .vssd1(vssd1),
-`endif
+// `ifdef USE_POWER_PINS
+//     .vccd1(vccd1),
+//     .vssd1(vssd1),
+// `endif
 
+    .VDD(io_in[2]),
+    .GND(io_in[3]),
     .BL(analog_io[7:0]),
     .SSL(analog_io[9:8]),
     .GSL(analog_io[11:10]),

@@ -607,7 +607,7 @@ MACRO flash_array_8x8
         RECT 8.450 -8.515 8.620 -8.345 ;
     END
   END SSL[1]
-  PIN vssd1
+  PIN GND
     ANTENNADIFFAREA 3.279200 ;
     PORT
       LAYER pwell ;
@@ -738,8 +738,8 @@ MACRO flash_array_8x8
         RECT 5.805 -22.460 6.035 -22.170 ;
         RECT 7.245 -22.460 7.475 -22.170 ;
     END
-  END vssd1
-  PIN vccd1
+  END GND
+  PIN VDD
     ANTENNADIFFAREA 2.860800 ;
     PORT
       LAYER nwell ;
@@ -762,7 +762,7 @@ MACRO flash_array_8x8
       LAYER met1 ;
         RECT 2.515 -18.305 8.275 -18.075 ;
     END
-  END vccd1
+  END VDD
   PIN sen1
     ANTENNAGATEAREA 0.504000 ;
     PORT
