@@ -87,3 +87,5 @@ set ::env(DIODE_INSERTION_STRATEGY) 0
 set ::env(FILL_INSERTION) 0
 set ::env(TAP_DECAP_INSERTION) 0
 set ::env(CLOCK_TREE_SYNTH) 0
+
+set ::env(MAGIC_DRC_USE_GDS) 0
