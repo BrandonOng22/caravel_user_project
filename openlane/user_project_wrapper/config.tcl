@@ -38,15 +38,19 @@ set ::env(VERILOG_FILES) "\
 	$script_dir/../../verilog/rtl/user_project_wrapper.v"
 
 ## Clock configurations
-set ::env(CLOCK_PORT) "user_clock2"
-set ::env(CLOCK_NET) "mprj.clk"
+# set ::env(CLOCK_PORT) "user_clock2"
+# set ::env(CLOCK_NET) "mprj.clk"
 
-set ::env(CLOCK_PERIOD) "10"
+# set ::env(CLOCK_PERIOD) "10"
 
 ## Internal Macros
 ### Macro PDN Connections
-set ::env(FP_PDN_MACRO_HOOKS) "\
-	mprj vccd1 vssd1"
+# set ::env(FP_PDN_MACRO_HOOKS) "\
+# 	u_flash_array_8x8 vccd1 vssd1"
+
+set ::env(FP_PDN_ENABLE_MACROS_GRID) 0
+set ::env(LVS_INSERT_POWER_PINS) 0
+
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
@@ -54,15 +58,18 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/flash_array_8x8.v"
 
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/user_proj_example.lef"
+	$script_dir/../../lef/flash_array_8x8.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/user_proj_example.gds"
+	$script_dir/../../gds/flash_array_8x8.gds"
 
 set ::env(GLB_RT_MAXLAYER) 5
+
+set ::env(VDD_NETS) [list {vccd1}]
+set ::env(GND_NETS) [list {vssd1}]
 
 # disable pdn check nodes becuase it hangs with multiple power domains.
 # any issue with pdn connections will be flagged with LVS so it is not a critical check.
@@ -83,3 +90,5 @@ set ::env(DIODE_INSERTION_STRATEGY) 0
 set ::env(FILL_INSERTION) 0
 set ::env(TAP_DECAP_INSERTION) 0
 set ::env(CLOCK_TREE_SYNTH) 0
+
+set ::env(MAGIC_DRC_USE_GDS) 0

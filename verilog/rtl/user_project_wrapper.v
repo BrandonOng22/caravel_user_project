@@ -76,46 +76,39 @@ module user_project_wrapper #(
 
     // User maskable interrupt signals
     output [2:0] user_irq
+
 );
+
+    wire vdd,gnd;
+
+    assign vdd = vccd1;
+    assign gnd = vssd1;
 
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_proj_example mprj (
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
+flash_array_8x8 u_flash_array_8x8(
+// `ifdef USE_POWER_PINS
+//     .vccd1(vccd1),
+//     .vssd1(vssd1),
+// `endif
 
-    .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
+    .VDD(io_in[2]),
+    .GND(io_in[3]),
+    .BL(analog_io[7:0]),
+    .SSL(analog_io[9:8]),
+    .GSL(analog_io[11:10]),
+    .WL0(analog_io[15:12]),
+    .WL1(analog_io[19:16]),
+    .SL(analog_io[20]),
+    .VBPW(analog_io[21]),
 
-    // MGMT SoC Wishbone Slave
-
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
-
-    // Logic Analyzer
-
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
-
-    // IO Pads
-
-    .io_in (io_in),
-    .io_out(io_out),
-    .io_oeb(io_oeb),
-
-    // IRQ
-    .irq(user_irq)
+    .sen1(io_in[0]),
+    .sen2(io_in[1]),
+    .out_en(io_in[5:2]),
+    
+    .out(io_out[7:0])
 );
 
 endmodule	// user_project_wrapper
