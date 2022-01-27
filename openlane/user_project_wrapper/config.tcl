@@ -38,18 +38,18 @@ set ::env(VERILOG_FILES) "\
 	$script_dir/../../verilog/rtl/user_project_wrapper.v"
 
 ## Clock configurations
-# set ::env(CLOCK_PORT) "user_clock2"
+set ::env(CLOCK_PORT) ""
 # set ::env(CLOCK_NET) "mprj.clk"
 
 # set ::env(CLOCK_PERIOD) "10"
 
 ## Internal Macros
 ### Macro PDN Connections
-# set ::env(FP_PDN_MACRO_HOOKS) "\
-# 	u_flash_array_8x8 vccd1 vssd1"
+set ::env(FP_PDN_MACRO_HOOKS) "\
+	u_flash_array_8x8 vccd1 vssd1"
 
-set ::env(FP_PDN_ENABLE_MACROS_GRID) 0
-set ::env(LVS_INSERT_POWER_PINS) 0
+# set ::env(FP_PDN_ENABLE_MACROS_GRID) 0
+# set ::env(LVS_INSERT_POWER_PINS) 0
 
 
 ### Macro Placement

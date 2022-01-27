@@ -94,8 +94,11 @@ flash_array_8x8 u_flash_array_8x8(
 //     .vssd1(vssd1),
 // `endif
 
-    .VDD(io_in[2]),
-    .GND(io_in[3]),
+    `ifdef USE_POWER_PINS
+    .VDD(vccd1),
+    .GND(vssd1),
+    `endif
+
     .BL(analog_io[7:0]),
     .SSL(analog_io[9:8]),
     .GSL(analog_io[11:10]),

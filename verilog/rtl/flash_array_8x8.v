@@ -6,7 +6,9 @@ module flash_array_8x8 (
 //     inout vccd1, vssd1,
 // `endif
 
-    input VDD,GND,
+    `ifdef USE_POWER_PINS
+        inout VDD,GND,
+    `endif
 
     // BL
     inout [7:0] BL,

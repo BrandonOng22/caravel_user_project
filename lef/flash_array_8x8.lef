@@ -575,7 +575,8 @@ MACRO flash_array_8x8
     END
   END SSL[1]
   PIN GND
-    ANTENNADIFFAREA 4.680000 ;
+    DIRECTION INOUT ;
+    USE GROUND ;
     PORT
       LAYER li1 ;
         RECT 3.365 -13.965 3.535 -13.905 ;
@@ -666,7 +667,8 @@ MACRO flash_array_8x8
     END
   END GND
   PIN VDD
-    ANTENNADIFFAREA 2.860800 ;
+    DIRECTION INOUT ;
+    USE POWER ;
     PORT
       LAYER nwell ;
         RECT 2.335 -19.565 8.455 -16.815 ;
