@@ -48,8 +48,17 @@ set ::env(CLOCK_PORT) ""
 # set ::env(FP_PDN_MACRO_HOOKS) "\
 # 	u_flash_array_8x8 vccd1 vssd1"
 
-set ::env(FP_PDN_ENABLE_MACROS_GRID) 0
-set ::env(LVS_INSERT_POWER_PINS) 0
+# set ::env(PDN_CFG) $script_dir/pdn.tcl
+
+	# pdngen::specify_grid_macro {
+	# 	power_pins "VDD"
+	# 	ground_pins "GND"
+	# 	blockages "li metal1 metal2"
+	# 	connect {{metal1_PIN metal2} {metal2 metal3} {metal3 metal4} {metal4 metal5}}
+	# }
+
+# set ::env(FP_PDN_ENABLE_MACROS_GRID) 0
+# set ::env(LVS_INSERT_POWER_PINS) 0
 
 
 ### Macro Placement
