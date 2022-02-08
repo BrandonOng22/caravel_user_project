@@ -45,8 +45,8 @@ set ::env(CLOCK_PORT) ""
 
 ## Internal Macros
 ### Macro PDN Connections
-# set ::env(FP_PDN_MACRO_HOOKS) "\
-# 	u_flash_array_8x8 vccd1 vssd1"
+set ::env(FP_PDN_MACRO_HOOKS) "\
+	u_flash_array_8x8 vccd1 vssd1"
 
 # set ::env(PDN_CFG) $script_dir/pdn.tcl
 
@@ -77,8 +77,8 @@ set ::env(EXTRA_GDS_FILES) "\
 
 set ::env(GLB_RT_MAXLAYER) 5
 
-set ::env(VDD_NETS) [list {vccd1}]
-set ::env(GND_NETS) [list {vssd1}]
+# set ::env(VDD_NETS) [list {vccd1}]
+# set ::env(GND_NETS) [list {vssd1}]
 
 # disable pdn check nodes becuase it hangs with multiple power domains.
 # any issue with pdn connections will be flagged with LVS so it is not a critical check.
