@@ -89,15 +89,15 @@ module user_project_wrapper #(
 /*--------------------------------------*/
 
 flash_array_8x8 u_flash_array_8x8(
-// `ifdef USE_POWER_PINS
-//     .vccd1(vccd1),
-//     .vssd1(vssd1),
-// `endif
+`ifdef USE_POWER_PINS
+    .vccd1(vccd1),
+    .vssd1(vssd1),
+`endif
 
-    `ifdef USE_POWER_PINS
-    .VDD(vccd1),
-    .GND(vssd1),
-    `endif
+    // `ifdef USE_POWER_PINS
+    // .VDD(vccd1),
+    // .GND(vssd1),
+    // `endif
 
     .BL(analog_io[7:0]),
     .SSL(analog_io[9:8]),

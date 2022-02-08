@@ -43,12 +43,12 @@ module user_project_wrapper (user_clock2,
 
  wire gnd;
 
- flash_array_8x8 u_flash_array_8x8 (.VBPW(analog_io[21]),
-    .SL(analog_io[20]),
-    .GND(io_in[3]),
-    .VDD(io_in[2]),
+ flash_array_8x8 u_flash_array_8x8 (.sen2(io_in[1]),
     .sen1(io_in[0]),
-    .sen2(io_in[1]),
+    .VBPW(analog_io[21]),
+    .SL(analog_io[20]),
+    .vccd1(vccd1),
+    .vssd1(vssd1),
     .BL({analog_io[7],
     analog_io[6],
     analog_io[5],

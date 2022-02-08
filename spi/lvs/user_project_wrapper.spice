@@ -1,10 +1,10 @@
 * NGSPICE file created from user_project_wrapper.ext - technology: sky130A
 
 * Black-box entry subcircuit for flash_array_8x8 abstract view
-.subckt flash_array_8x8 VBPW BL[0] BL[1] BL[2] BL[3] BL[4] BL[5] BL[6] BL[7] SSL[0]
-+ WL0[0] WL0[1] WL0[2] WL0[3] GSL[0] GSL[1] SL WL1[2] WL1[3] WL1[0] WL1[1] out_en[0]
-+ out[1] out[0] out_en[1] out[3] out[2] out_en[2] out[5] out[4] out_en[3] out[7] out[6]
-+ SSL[1] GND VDD sen1 sen2
+.subckt flash_array_8x8 sen2 sen1 VDD GND BL[7] BL[6] BL[5] BL[4] BL[3] BL[2] BL[1]
++ BL[0] VBPW SSL[1] out[6] out[4] out[2] out[0] WL1[1] WL1[0] WL1[3] WL1[2] SL GSL[1]
++ GSL[0] WL0[3] WL0[2] WL0[1] WL0[0] SSL[0] out[7] out_en[3] out[5] out_en[2] out[3]
++ out_en[1] out[1] out_en[0] vccd1 vssd1
 .ends
 
 .subckt user_project_wrapper analog_io[0] analog_io[10] analog_io[11] analog_io[12]
@@ -108,11 +108,11 @@
 + wbs_dat_o[30] wbs_dat_o[31] wbs_dat_o[3] wbs_dat_o[4] wbs_dat_o[5] wbs_dat_o[6]
 + wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0] wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3]
 + wbs_stb_i wbs_we_i
-Xu_flash_array_8x8 analog_io[21] analog_io[0] analog_io[1] analog_io[2] analog_io[3]
-+ analog_io[4] analog_io[5] analog_io[6] analog_io[7] analog_io[8] analog_io[12] analog_io[13]
-+ analog_io[14] analog_io[15] analog_io[10] analog_io[11] analog_io[20] analog_io[18]
-+ analog_io[19] analog_io[16] analog_io[17] io_in[2] io_out[1] io_out[0] io_in[3]
-+ io_out[3] io_out[2] io_in[4] io_out[5] io_out[4] io_in[5] io_out[7] io_out[6] analog_io[9]
-+ io_in[3] io_in[2] io_in[0] io_in[1] flash_array_8x8
+Xu_flash_array_8x8 io_in[1] io_in[0] u_flash_array_8x8/VDD u_flash_array_8x8/GND analog_io[7]
++ analog_io[6] analog_io[5] analog_io[4] analog_io[3] analog_io[2] analog_io[1] analog_io[0]
++ analog_io[21] analog_io[9] io_out[6] io_out[4] io_out[2] io_out[0] analog_io[17]
++ analog_io[16] analog_io[19] analog_io[18] analog_io[20] analog_io[11] analog_io[10]
++ analog_io[15] analog_io[14] analog_io[13] analog_io[12] analog_io[8] io_out[7] io_in[5]
++ io_out[5] io_in[4] io_out[3] io_in[3] io_out[1] io_in[2] vccd1 vssd1 flash_array_8x8
 .ends
 
