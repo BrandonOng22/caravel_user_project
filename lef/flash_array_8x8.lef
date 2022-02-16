@@ -408,28 +408,28 @@ MACRO flash_array_8x8
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 80.860 -7.450 81.190 -7.280 ;
+        RECT 80.865 -7.450 81.195 -7.280 ;
     END
   END WL1[1]
   PIN WL1[0]
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 74.580 -7.880 74.910 -7.710 ;
+        RECT 74.575 -7.880 74.905 -7.710 ;
     END
   END WL1[0]
   PIN WL1[3]
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 80.860 -6.590 81.190 -6.420 ;
+        RECT 80.865 -6.590 81.195 -6.420 ;
     END
   END WL1[3]
   PIN WL1[2]
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 74.580 -7.020 74.910 -6.850 ;
+        RECT 74.575 -7.020 74.905 -6.850 ;
     END
   END WL1[2]
   PIN SL
@@ -457,28 +457,28 @@ MACRO flash_array_8x8
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 80.860 -4.550 81.190 -4.380 ;
+        RECT 80.865 -4.550 81.195 -4.380 ;
     END
   END WL0[3]
   PIN WL0[2]
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 74.580 -4.120 74.910 -3.950 ;
+        RECT 74.575 -4.120 74.905 -3.950 ;
     END
   END WL0[2]
   PIN WL0[1]
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 80.860 -3.690 81.190 -3.520 ;
+        RECT 80.865 -3.690 81.195 -3.520 ;
     END
   END WL0[1]
   PIN WL0[0]
     ANTENNAGATEAREA 0.792000 ;
     PORT
       LAYER li1 ;
-        RECT 74.580 -3.260 74.910 -3.090 ;
+        RECT 74.575 -3.260 74.905 -3.090 ;
     END
   END WL0[0]
   PIN SSL[0]
