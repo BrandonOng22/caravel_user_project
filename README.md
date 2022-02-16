@@ -5,7 +5,8 @@
 | :exclamation: Important Note            |
 |-----------------------------------------|
 
-## Please fill in your project documentation in this README.md file 
+## NAND Flash MPW-5
+Small hand-drawn NAND flash array
 
 
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
