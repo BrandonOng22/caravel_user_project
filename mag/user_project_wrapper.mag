@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1645042645
+timestamp 1646066240
 << locali >>
 rect 260849 439875 260883 440113
 rect 260757 439841 260883 439875
@@ -53227,9 +53227,9 @@ rect 592298 -7622 592382 -7386
 rect 592618 -7622 592650 -7386
 rect -8726 -7654 592650 -7622
 use flash_array_8x8  u_flash_array_8x8
-timestamp 1645042645
+timestamp 1646066240
 transform 1 0 246057 0 1 440000
-box 7737 -20000 26357 80000
+box 7737 -5103 26357 0
 << labels >>
 rlabel metal3 s 583520 285276 584960 285516 6 analog_io[0]
 port 0 nsew signal bidirectional

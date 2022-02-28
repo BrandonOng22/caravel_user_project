@@ -6,7 +6,7 @@ MACRO flash_array_8x8
   CLASS BLOCK ;
   FOREIGN flash_array_8x8 ;
   ORIGIN 0.000 0.000 ;
-  SIZE 93.100 BY 500.000 ;
+  SIZE 93.100 BY 25.555 ;
   PIN sen2
     ANTENNAGATEAREA 0.504000 ;
     PORT
@@ -688,7 +688,7 @@ MACRO flash_array_8x8
         RECT 41.040 -18.350 41.360 -18.030 ;
         RECT 41.440 -18.350 41.760 -18.030 ;
       LAYER met4 ;
-        RECT 38.685 -100.000 41.785 400.000 ;
+        RECT 38.685 -25.490 41.785 0.000 ;
     END
   END vccd1
   PIN vssd1
@@ -802,7 +802,7 @@ MACRO flash_array_8x8
         RECT 130.690 -15.375 131.010 -15.055 ;
         RECT 131.090 -15.375 131.410 -15.055 ;
       LAYER met4 ;
-        RECT 128.685 -100.000 131.785 400.000 ;
+        RECT 128.685 -25.515 131.785 0.000 ;
     END
   END vssd1
   OBS
